@@ -34,10 +34,74 @@ a.box:hover,
   box-shadow: 0 0 0 2px orangered;
 }
 
+a {
+  color: #1C51A6;
+}
+
+.button.is-info {
+  background-color: #0A5A8F;
+}
+
+.button.is-link {
+  background-color: #054f80;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
   background-size: cover;
+}
+
+.has-background-grey-light {
+  background-color: #E6E6E6 !important;
+}
+
+.has-background-grey-lighter {
+  background-color: #E6E6E6 !important;
+}
+
+.hero.is-info {
+  background-color: #054f80;
+}
+
+.hero.is-info .tabs.is-boxed li.is-active a {
+  color: #0A578A;
+}
+
+.tag:not(body).is-primary {
+  background-color: #00574A;
+}
+
+.tag:not(body).is-link {
+  background-color: #054f80;
+}
+
+.tag:not(body).is-success {
+  color: black;
+}
+
+.tag:not(body).is-danger {
+  background-color: #AD0023;
+}
+
+.has-text-grey-light {
+  color: #4F4F4F !important;
+}
+
+.input.is-success {
+  border-color: #00574A;
+}
+
+.help.is-success {
+  color: #00574A;
+}
+
+.input.is-danger {
+  border-color: #AD0023;
+}
+
+.help.is-danger {
+  color: #AD0023;
 }
 
 .tabs {
