@@ -1,3 +1,39 @@
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+
+a.box:focus, 
+a.box:hover,
+
+.button:focus:not(:active),
+.button.is-white:focus:not(:active),
+.button.is-info:focus:not(:active),
+.button.is-link:focus:not(:active),
+.button.is-primary:focus:not(:active),
+
+.input:active, 
+.input:focus, 
+.input.is-success:active,
+.input.is-success:focus,
+.input.is-danger:active,
+.input.is-danger:focus,
+
+.textarea:active, 
+.textarea:focus,
+.textarea.is-success:active,
+.textarea.is-success:focus,
+.textarea.is-danger:active,
+.textarea.is-danger:focus,
+
+.select select:active,
+.select select:focus
+{
+  outline: none;
+  box-shadow: 0 0 0 2px orangered;
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
