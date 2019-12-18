@@ -32,12 +32,28 @@ a {
   color: #1c51a6;
 }
 
+a:focus, a:hover {
+  text-decoration: underline !important;
+}
+
 .button.is-info {
   background-color: #0a5a8f;
 }
 
 .button.is-link {
   background-color: #054f80;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.breadcrumbs li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 .hero-bg {
