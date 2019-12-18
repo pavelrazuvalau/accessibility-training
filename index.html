@@ -28,40 +28,55 @@
           </div>
 
           <nav id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-              <span class="navbar-item">
+            <ul class="navbar-end">
+              <li class="navbar-item advanced-skip-link">  
+                <select class="visually-hidden">
+                  <option selected disabled>Skip to</option>
+                  <option value="#main">Main content area</option>
+                  <option value="#about">About us</option>
+                  <option value="#three-key-features">Three key features</option>
+                  <option value="#list-of-topics">List of topics</option>
+                  <option value="#upcoming-events">Upcoming events</option>
+                  <option value="#services">Services</option>              
+                  <option value="#past-events">Photos from past events</option>
+                  <option value="#forum">Forum</option>
+                  <option value="#contact-us">Contact us</option>
+                  <option value="#footer">Footer</option>
+                </select>
+              </li>
+              <li class="navbar-item">
                 <a href="#" class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-home"></i>
                   </span>
                   <span>Home</span>
                 </a>
-              </span>
-              <span class="navbar-item">
+              </li>
+              <li class="navbar-item">
                 <a href="#" class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fab fa-superpowers"></i>
                   </span>
                   <span>Examples</span>
                 </a>
-              </span>
-              <span class="navbar-item">
+              </li>
+              <li class="navbar-item">
                 <a href="#" class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fa fa-book"></i>
                   </span>
                   <span>Documentation</span>
                 </a>
-              </span>
-              <span class="navbar-item">
+              </li>
+              <li class="navbar-item">
                 <a href="#" class="button is-white is-outlined">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
                   <span>View Source</span>
                 </a>
-              </span>
-            </div>
+              </li>
+            </ul>
           </nav>
         </div>
       </div>
@@ -90,7 +105,7 @@
     </div>
   </div>
 
-  <main>
+  <main id="main">
     <div class="container">
       <nav>
         <ul class="breadcrumbs">
@@ -100,6 +115,7 @@
         </ul>
       <nav>
     </div>
+
     <section class="section" id="about" aria-labelledby="about-us-heading">
       <header class="section-heading has-text-centered">
         <h1 class="title is-2" id="about-us-heading">About Us</h1>
@@ -216,7 +232,7 @@
       </div>
     </section>
   
-    <section class="hero has-background-grey-light" aria-labelledby="key-features-heading">
+    <section id="three-key-features" class="hero has-background-grey-light" aria-labelledby="key-features-heading">
       <div class="container features">
         <div class="section-heading has-text-centered">
           <h1 class="title is-2" id="key-features-heading">Three key features</h1>
@@ -285,7 +301,7 @@
       </div>
     </section>
   
-    <section class="hero is-info" aria-labelledby="list-of-topics">
+    <section id="list-of-topics" class="hero is-info" aria-labelledby="list-of-topics">
       <div class="hero-body">
         <div class="container">
           <h1 class="title" id="list-of-topics">List of topics</h1>
@@ -462,7 +478,7 @@
       </div>
     </section>
   
-    <section class="section has-background-grey-lighter" aria-labelledby="upcoming-events-heading">
+    <section id="upcoming-events" class="section has-background-grey-lighter" aria-labelledby="upcoming-events-heading">
       <div class="container has-text-centered">
           <div class="section-heading has-text-centered">
             <h1 class="title is-2" id="upcoming-events-heading">Upcoming events</h1>
@@ -537,7 +553,7 @@
       </div>
     </section>
   
-    <section class="section" aria-labelledby="services-heading">
+    <section id="services" class="section" aria-labelledby="services-heading">
       <div class="section-heading has-text-centered">
         <h1 class="title is-2" id="services-heading">Services</h1>
         <div class="subtitle is-5">What can I do for you?</div>
@@ -585,7 +601,7 @@
       </div>
     </section>
   
-    <section class="section has-background-grey-lighter" aria-labelledby="past-events-heading">
+    <section id="past-events" class="section has-background-grey-lighter" aria-labelledby="past-events-heading">
       <div class="container">
         <div class="section-heading has-text-centered">
           <h1 class="title is-2" id="past-events-heading">Photos from past events</h1>
@@ -750,7 +766,7 @@
       </div>
     </section>
   
-    <section class="section" aria-labelledby="forum-heading">
+    <section id="forum" class="section" aria-labelledby="forum-heading">
       <div class="container">
         <div class="section-heading has-text-centered">
           <h1 class="title is-2" id="forum-heading">Forum</h1>
@@ -911,7 +927,7 @@
       </div>
     </section>
   
-    <section class="section has-background-light" aria-labelledby="contact-us-heading">
+    <section id="contact-us" class="section has-background-light" aria-labelledby="contact-us-heading">
       <div class="container">
         <div class="section-heading has-text-centered">
           <h1 class="title is-2" id="contact-us-heading">Contact us</h1>
@@ -1011,7 +1027,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="container">
       <div class="columns">
         <div class="column is-3 is-offset-2">
