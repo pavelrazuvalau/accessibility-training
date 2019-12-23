@@ -30,10 +30,6 @@ a.box:hover,
 
 a {
   color: #1c51a6;
-}
-
-a:focus,
-a:hover {
   text-decoration: underline !important;
 }
 
@@ -55,6 +51,15 @@ a:hover {
   padding: 8px;
   color: black;
   content: "/\00a0";
+}
+
+.hero-body {
+  color: white;
+}
+
+.hero-body form label {
+  margin-right: 10px;
+  line-height: 2;
 }
 
 .hero-bg {
