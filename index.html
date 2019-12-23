@@ -28,8 +28,8 @@
           </div>
 
           <nav id="navbarMenu" class="navbar-menu" aria-label="Main navigation">
-            <ul class="navbar-end">
-              <li class="navbar-item advanced-skip-link">  
+            <ul class="navbar-end" role="menu">
+              <li class="navbar-item advanced-skip-link" role="menuitem">  
                 <label for="skip-to-dropwown" class="visually-hidden">Select landmark to navigate</label>
                 <select class="visually-hidden" id="skip-to-dropwown">
                   <option selected disabled>Skip to</option>
@@ -45,37 +45,53 @@
                   <option value="#footer">Footer</option>
                 </select>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item" role="menuitem">
                 <a href="#" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <span class="fa fa-home"></span>
                   </span>
                   <span>Home</span>
                 </a>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item" role="menuitem">
                 <a href="#" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <span class="fab fa-superpowers"></span>
                   </span>
                   <span>Examples</span>
                 </a>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item" role="menuitem">
                 <a href="#" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <span class="fa fa-book"></span>
                   </span>
                   <span>Documentation</span>
                 </a>
               </li>
-              <li class="navbar-item">
+              <li class="navbar-item" role="menuitem">
                 <a href="#" class="button is-white is-outlined">
-                  <span class="icon">
+                  <span class="icon" aria-hidden="true">
                     <span class="fab fa-github"></span>
                   </span>
                   <span>View Source</span>
                 </a>
+              </li>
+              <li class="navbar-item" role="menuitem" aria-haspopup="true">
+                <button class="button is-white is-outlined" id="submenu-button" aria-controls="submenu-example">
+                  <span>Submenu</span>
+                  <ul role="menu" class="submenu" aria-labelledby="submenu-button" id="submenu-example">
+                    <li class="navbar-item" role="menuitem">
+                      <a href="#">One</a>
+                    </li>
+                    <li class="navbar-item" role="menuitem">
+                      <a href="#">Two</a>
+                    </li>
+                    <li class="navbar-item" role="menuitem">
+                      <a href="#">Three</a>
+                    </li>
+                  </ul>
+                </button>
               </li>
             </ul>
           </nav>
@@ -230,6 +246,10 @@
         </figure>
         <h6 class="is-6 title">Sixth level</h6>
         <p>Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.</p>
+        <div class="content container" aria-live="polite" aria-atomic="true">
+          <p>Live region example</p>
+          <p id="live-counter">Current count: 0</p>
+        </div>
       </div>
     </section>
   
@@ -310,24 +330,18 @@
         </div>
       </div>
       <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul>
-          <li data-target="pane-1" id="1" class="is-active">
-            <button>
-              <span class="icon is-small"><span class="fa fa-image"></span></span>
-              <span>Pictures</span>
-            </button>
+        <ul role="tablist">
+          <li data-target="pane-1" id="1" class="is-active" role="tab" aria-selected="true" tabindex="0">
+            <span class="icon is-small" aria-hidden="true"><span class="fa fa-image"></span></span>
+            <span>Pictures</span>
           </li>
-          <li data-target="pane-3" id="3">
-            <button>
-              <span class="icon is-small"><span class="fab fa-superpowers"></span></span>
-              <span>Team</span>
-            </button>
+          <li data-target="pane-3" id="3" role="tab" aria-selected="false" tabindex="0">
+            <span class="icon is-small" aria-hidden="true"><span class="fab fa-superpowers"></span></span>
+            <span>Team</span>
           </li>
-          <li data-target="pane-4" id="4">
-            <button>
-              <span class="icon is-small"><span class="fa fa-film"></span></span>
-              <span>Video</span>
-            </button>
+          <li data-target="pane-4" id="4" role="tab" aria-selected="false" tabindex="0">
+            <span class="icon is-small" aria-hidden="true"><span class="fa fa-film"></span></span>
+            <span>Video</span>
           </li>
         </ul>
       </div>
@@ -939,44 +953,44 @@
           <div class="field">
             <label class="label" for="name-input">Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input" id="name-input">
+              <input class="input" type="text" placeholder="Name input" id="name-input" aria-required="true">
             </div>
           </div>
   
           <div class="field">
             <label class="label" for="username-input">Username</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-success" type="text" id="username-input">
-              <span class="icon is-small is-left">
+              <input class="input is-success" type="text" placeholder="Username input" id="username-input" aria-describedby="username-validation-message" aria-required="true">
+              <span class="icon is-small is-left" aria-hidden="true">
                 <span class="fas fa-user"></span>
               </span>
-              <span class="icon is-small is-right">
+              <span class="icon is-small is-right" aria-hidden="true">
                 <span class="fas fa-check"></span>
               </span>
             </div>
-            <p class="help is-success">This username is available</p>
+            <p class="help is-success" id="username-validation-message">This username is available</p>
           </div>
   
           <div class="field">
             <label class="label" for="email-input">Email</label>
             <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email-input">
-              <span class="icon is-small is-left">
+              <input class="input is-danger" type="email" placeholder="Email input" value="hello@" id="email-input" aria-describedby="password-validation-message" aria-invalid="true" aria-required="true">
+              <span class="icon is-small is-left" aria-hidden="true">
                 <span class="fas fa-envelope"></span>
               </span>
-              <span class="icon is-small is-right">
+              <span class="icon is-small is-right" aria-hidden="true">
                 <span class="fas fa-exclamation-triangle"></span>
               </span>
             </div>
-            <p class="help is-danger">This email is invalid</p>
+            <p class="help is-danger" id="password-validation-message">This email is invalid</p>
           </div>
   
           <div class="field">
             <label class="label" for="subject-select">Subject</label>
             <div class="control">
               <div class="select">
-                <select id="subject-select">
-                  <option>Select dropdown</option>
+                <select id="subject-select" aria-required="true">
+                  <option>Select subject</option>
                   <option>With options</option>
                 </select>
               </div>
@@ -986,14 +1000,14 @@
           <div class="field">
             <label class="label" for="message-input">Message</label>
             <div class="control">
-              <textarea class="textarea" placeholder="Textarea" id="message-input"></textarea>
+              <textarea class="textarea" placeholder="Your message" id="message-input" aria-required="true"></textarea>
             </div>
           </div>
   
           <div class="field">
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" aria-required="true">
                 I agree to the <a href="#" target="_blank" title="opens in the new tab">
                   <span class="fas fa-external-link-alt"></span> terms and conditions
                 </a>
@@ -1002,7 +1016,7 @@
           </div>
   
           <div class="field">
-            <fieldset class="control">
+            <fieldset class="control" aria-required="true">
               <legend>Do you agree to share anonymous statistics?</legend>
               <label class="radio">
                 <input type="radio" name="question">
@@ -1083,7 +1097,7 @@
     </div>
   </footer>
 
-  <div id="modal-card" role="dialog" aria-label="Post by Jane Doe" aria-describedby="modal-1-content" class="modal modal-fx-3dSlit">
+  <div id="modal-card" role="dialog" aria-modal="true" aria-label="Post by Jane Doe" aria-describedby="modal-1-content" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-tiny">
       <div class="card">
@@ -1121,7 +1135,7 @@
     <button class="modal-close is-large" aria-label="Close dialog"></button>
   </div>
 
-  <div id="modal-image1" role="dialog" aria-label="Expanded image dialog" class="modal modal-fx-3dSlit">
+  <div id="modal-image1" role="dialog" aria-modal="true" aria-label="Expanded image dialog" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-huge is-image">
       <img src="https://source.unsplash.com/random/?sig=1" alt="Image that loaded randomly">
@@ -1129,10 +1143,10 @@
     <button class="modal-close is-large" aria-label="Close dialog"></button>
   </div>
 
-  <div id="modal-image2" role="dialog" aria-label="Expanded image dialog" class="modal modal-fx-superScaled">
+  <div id="modal-image2" role="dialog" aria-modal="true" aria-label="Expanded image dialog" class="modal modal-fx-superScaled">
     <div class="modal-background"></div>
     <div class="modal-content  is-image">
-      <img src="https://source.unsplash.com/random/?sig=3" alt="Image that loaded randomly">
+      <img src="https://source.unsplash.com/random/?sig=3" alt="The last image that loaded randomly">
     </div>
     <button class="modal-close is-large" aria-label="Close dialog"></button>
   </div>

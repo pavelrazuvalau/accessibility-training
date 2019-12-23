@@ -10,11 +10,21 @@
   advancedSkipDropDown.addEventListener('change', function(event) {
     location = event.target.value;
   });
+
+  var liveCounter = document.querySelector('#live-counter');
+  var currentCount = 1;
+
+  setInterval(() => { liveCounter.textContent = 'Current count: ' + currentCount++ }, 1000 * 60)
 })();
 
 document.querySelectorAll("#nav li").forEach(function(navEl) {
   navEl.onclick = function() {
     toggleTab(this.id, this.dataset.target);
+  };
+  navEl.onkeydown = function() {
+    if (event.keyCode == 13) {
+      toggleTab(event.target.id, event.target.dataset.target)
+    }
   };
 });
 
@@ -24,9 +34,11 @@ function toggleTab(selectedNav, targetId) {
   navEls.forEach(function(navEl) {
     if (navEl.id == selectedNav) {
       navEl.classList.add("is-active");
+      navEl.setAttribute("aria-selected", true);
     } else {
       if (navEl.classList.contains("is-active")) {
         navEl.classList.remove("is-active");
+        navEl.setAttribute("aria-selected", false);
       }
     }
   });
@@ -41,3 +53,4 @@ function toggleTab(selectedNav, targetId) {
     }
   });
 }
+
