@@ -5,6 +5,11 @@
     burger.classList.toggle("is-active");
     menu.classList.toggle("is-active");
   });
+
+  var advancedSkipDropDown = document.querySelector('.advanced-skip-link select');
+  advancedSkipDropDown.addEventListener('change', function(event) {
+    location = event.target.value;
+  });
 })();
 
 document.querySelectorAll("#nav li").forEach(function(navEl) {

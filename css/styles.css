@@ -1,23 +1,178 @@
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a.box:focus,
+a.box:hover,
+.button:focus:not(:active),
+.button.is-white:focus:not(:active),
+.button.is-info:focus:not(:active),
+.button.is-link:focus:not(:active),
+.button.is-primary:focus:not(:active),
+.input:active,
+.input:focus,
+.input.is-success:active,
+.input.is-success:focus,
+.input.is-danger:active,
+.input.is-danger:focus,
+.textarea:active,
+.textarea:focus,
+.textarea.is-success:active,
+.textarea.is-success:focus,
+.textarea.is-danger:active,
+.textarea.is-danger:focus,
+.select select:active,
+.select select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px orangered;
+}
+
+a {
+  color: #1c51a6;
+}
+
+a:focus,
+a:hover {
+  text-decoration: underline !important;
+}
+
+.button.is-info {
+  background-color: #0a5a8f;
+}
+
+.button.is-link {
+  background-color: #054f80;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.breadcrumbs li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
 .hero-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/accessibility-hero-banner.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
+.has-background-grey-light {
+  background-color: #e6e6e6 !important;
+}
+
+.has-background-grey-lighter {
+  background-color: #e6e6e6 !important;
+}
+
+.hero.is-info {
+  background-color: #054f80;
+}
+
+.hero.is-info .tabs.is-boxed li.is-active a {
+  color: #0a578a;
+}
+
+.tag:not(body).is-primary {
+  background-color: #00574a;
+}
+
+.tag:not(body).is-link {
+  background-color: #054f80;
+}
+
+.tag:not(body).is-success {
+  color: black;
+}
+
+.tag:not(body).is-danger {
+  background-color: #ad0023;
+}
+
+.has-text-grey-light {
+  color: #4f4f4f !important;
+}
+
+button.has-text-grey-light {
+  background: none;
+  box-sizing: border-box;
+  border: none;
+  width: 42px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input.is-success {
+  border-color: #00574a;
+}
+
+.help.is-success {
+  color: #00574a;
+}
+
+.input.is-danger {
+  border-color: #ad0023;
+}
+
+.help.is-danger {
+  color: #ad0023;
+}
+
 .tabs {
   margin-bottom: -1px !important;
   position: relative;
+  overflow: visible;
 }
+
 .tab-content {
   padding: 2rem;
 }
+
 .tab-pane {
   display: none;
 }
+
 .tab-pane.is-active {
   display: block;
   position: relative;
 }
+
+.tabs button {
+  align-items: center;
+  border: none;
+  border-bottom: 1px solid #dbdbdb;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1px;
+  padding: 0.5em 1em;
+  vertical-align: top;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.tabs .is-active button {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0a578a;
+  border: none;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  opacity: 1;
+}
+
 .is-active {
   display: initial;
 }
@@ -49,6 +204,10 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.embed-container iframe {
+  border: none;
 }
 
 .box.cta {
@@ -84,14 +243,13 @@
   box-shadow: 0 10px 16px rgba(0, 0, 0, 0.13), 0 6px 6px rgba(0, 0, 0, 0.19);
 }
 
-
 .has-same-height .card {
   height: 350px;
   overflow: hidden;
 }
 
 .skills-content .media + .media {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 .skills-content .progress {
@@ -103,8 +261,8 @@
 }
 
 .info-tiles {
-  margin: .75rem auto;
-  padding: 0 .75rem;
+  margin: 0.75rem auto;
+  padding: 0 0.75rem;
 }
 
 .button.is-primary.is-alt {
@@ -118,7 +276,7 @@
 .post {
   margin: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #E6EAEE;
+  border-bottom: 1px solid #e6eaee;
 }
 .post:last-child {
   padding-bottom: 0;
@@ -126,9 +284,8 @@
 }
 
 .forum-list li {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-
 
 @media screen and (max-width: 1087px) {
   .navbar-menu {
@@ -175,4 +332,22 @@ li {
   width: 40px;
   height: 40px;
   background-size: contain;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  height: 0px;
+  width: 0px;
+  position: absolute;
+}
+
+.visually-hidden:hover,
+.visually-hidden:focus,
+.visually-hidden:active {
+  clip: auto;
+  display: block;
+  height: auto;
+  width: auto;
+  position: static;
 }
