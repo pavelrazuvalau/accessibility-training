@@ -3,6 +3,7 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus,
+li:focus,
 a.box:focus,
 a.box:hover,
 .button:focus:not(:active),
@@ -30,11 +31,20 @@ a.box:hover,
 
 a {
   color: #1c51a6;
+  text-decoration: underline !important;
 }
 
-a:focus,
-a:hover {
-  text-decoration: underline !important;
+.submenu {
+  display: none;
+  width: 150px;
+  background-color: white;
+  position: absolute;
+  top: 50px;
+}
+
+.navbar-menu li button:hover .submenu,
+.navbar-menu li button:focus .submenu {
+  display: block;
 }
 
 .button.is-info {
@@ -55,6 +65,15 @@ a:hover {
   padding: 8px;
   color: black;
   content: "/\00a0";
+}
+
+.hero-body {
+  color: white;
+}
+
+.hero-body form label {
+  margin-right: 10px;
+  line-height: 2;
 }
 
 .hero-bg {
@@ -147,7 +166,7 @@ button.has-text-grey-light {
   position: relative;
 }
 
-.tabs button {
+.tabs li {
   align-items: center;
   border: none;
   border-bottom: 1px solid #dbdbdb;
@@ -163,7 +182,7 @@ button.has-text-grey-light {
   opacity: 0.9;
 }
 
-.tabs .is-active button {
+.tabs .is-active {
   background-color: #fff;
   border-color: #fff;
   color: #0a578a;
