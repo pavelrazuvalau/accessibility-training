@@ -329,17 +329,17 @@
           <div class="subtitle">We are always in touch we the outside world</div>
         </div>
       </div>
-      <div class="tabs is-boxed is-centered main-menu" id="nav">
-        <ul role="tablist">
-          <li data-target="pane-1" id="1" class="is-active" role="tab" aria-selected="true" tabindex="0">
+      <div class="tabs is-boxed is-centered main-menu" id="list-of-topics-tabs">
+        <ul role="tablist" aria-label="Topics" aria-orientation="horizontal">
+          <li data-target="pane-1" id="topics-tab-1" class="is-active" role="tab" aria-selected="true" tabindex="0">
             <span class="icon is-small" aria-hidden="true"><span class="fa fa-image"></span></span>
             <span>Pictures</span>
           </li>
-          <li data-target="pane-3" id="3" role="tab" aria-selected="false" tabindex="0">
+          <li data-target="pane-3" id="topics-tab-3" role="tab" aria-selected="false" tabindex="-1">
             <span class="icon is-small" aria-hidden="true"><span class="fab fa-superpowers"></span></span>
             <span>Team</span>
           </li>
-          <li data-target="pane-4" id="4" role="tab" aria-selected="false" tabindex="0">
+          <li data-target="pane-4" id="topics-tab-4" role="tab" aria-selected="false" tabindex="-1">
             <span class="icon is-small" aria-hidden="true"><span class="fa fa-film"></span></span>
             <span>Video</span>
           </li>
@@ -348,7 +348,7 @@
     </section>
   
     <section class="tab-content container" aria-label="Topic container">
-      <section class="tab-pane is-active level" aria-label="Pictures tab content" id="pane-1">
+      <div class="tab-pane is-active level" aria-labelledby="topics-tab-1" id="pane-1" role="tabpanel" tabindex="0">
         <div class="container">
           <div class="columns features">
             <div class="column is-4">
@@ -402,9 +402,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
   
-      <section class="tab-pane" aria-label="Team tab content" id="pane-3">
+      <div class="tab-pane" aria-labelledby="topics-tab-3" id="pane-3" role="tabpanel" tabindex="0">
         <div class="columns medias">
           <div class="column">
             <div class="media">
@@ -479,9 +479,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
   
-      <section class="tab-pane" aria-label="Video tab content" id="pane-4">
+      <div class="tab-pane" aria-labelledby="topics-tab-4" id="pane-4" role="tabpanel" tabindex="0">
         <div class="columns is-centered">
           <div class="column is-three-quarters">
             <h2 class="title has-text-centered">Inspired video</h2>
@@ -490,7 +490,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
   
     <section id="upcoming-events" class="section has-background-grey-lighter" aria-labelledby="upcoming-events-heading">

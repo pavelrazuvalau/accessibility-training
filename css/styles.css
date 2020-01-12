@@ -6,6 +6,7 @@ textarea:focus,
 li:focus,
 a.box:focus,
 a.box:hover,
+div:focus,
 .button:focus:not(:active),
 .button.is-white:focus:not(:active),
 .button.is-info:focus:not(:active),
@@ -159,6 +160,7 @@ button.has-text-grey-light {
 
 .tab-pane {
   display: none;
+  width: 100%;
 }
 
 .tab-pane.is-active {
