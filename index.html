@@ -77,21 +77,33 @@
                   <span>View Source</span>
                 </a>
               </li>
-              <li class="navbar-item" role="menuitem" aria-haspopup="true">
-                <button class="button is-white is-outlined" id="submenu-button" aria-controls="submenu-example">
-                  <span>Submenu</span>
-                  <ul role="menu" class="submenu" aria-labelledby="submenu-button" id="submenu-example">
-                    <li class="navbar-item" role="menuitem">
-                      <a href="#">One</a>
-                    </li>
-                    <li class="navbar-item" role="menuitem">
-                      <a href="#">Two</a>
-                    </li>
-                    <li class="navbar-item" role="menuitem">
-                      <a href="#">Three</a>
-                    </li>
-                  </ul>
+              <li class="navbar-item" role="menuitem" id="submenu">
+                <button class="button is-white is-outlined" id="submenu-button" aria-controls="submenu-example" aria-expanded="false" aria-haspopup="true">
+                  <span class="icon" aria-hidden="true">
+                    <span class="fab fa-superpowers"></span>
+                  </span>
+                  <span>Administration &#11167;</span>
                 </button>
+                <ul role="menu" id="sumbenu-container" class="submenu" aria-labelledby="submenu-button" id="submenu-example">
+                  <li class="navbar-item" role="none">
+                    <a href="#administration" role="menuitem">Administration</a>
+                  </li>
+                  <li class="navbar-item" role="none">
+                    <a href="#team-settings" role="menuitem" tabindex="-1">Team Settings</a>
+                  </li>
+                  <li class="navbar-item" role="none">
+                    <a href="#manage-your-team" role="menuitem" tabindex="-1">Manage Your Team</a>
+                  </li>
+                  <li class="navbar-item" role="none">
+                    <a href="#invitations" role="menuitem" tabindex="-1">Invitations</a>
+                  </li>
+
+                  <li role="separator"></li>
+
+                  <li class="navbar-item" role="none">
+                    <a href="#authentication" role="menuitem" tabindex="-1">Authentication</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>
