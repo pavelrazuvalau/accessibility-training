@@ -6,6 +6,7 @@ textarea:focus,
 li:focus,
 a.box:focus,
 a.box:hover,
+div:focus,
 .button:focus:not(:active),
 .button.is-white:focus:not(:active),
 .button.is-info:focus:not(:active),
@@ -36,15 +37,44 @@ a {
 
 .submenu {
   display: none;
-  width: 150px;
+  min-width: 170px;
   background-color: white;
   position: absolute;
-  top: 50px;
+  top: 60px;
+  border-radius: 5px;
 }
 
-.navbar-menu li button:hover .submenu,
-.navbar-menu li button:focus .submenu {
+.submenu.is-active {
   display: block;
+}
+
+.submenu li {
+  padding: 0;
+}
+
+.submenu li a {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  box-sizing: border-box;
+}
+
+.submenu li:first-child a {
+  border-radius: 5px 5px 0 0;
+}
+
+.submenu li:last-child a {
+  border-radius: 0 0 5px 5px;
+}
+
+.submenu li a:hover,
+.submenu li a:focus {
+  background-color: #E6E6E6;
+}
+
+
+.submenu li[role="separator"] {
+  border: .5px solid lightslategray;
 }
 
 .button.is-info {
@@ -159,6 +189,7 @@ button.has-text-grey-light {
 
 .tab-pane {
   display: none;
+  width: 100%;
 }
 
 .tab-pane.is-active {
